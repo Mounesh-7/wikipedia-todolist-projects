@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do List</title>
+<style>
+    *{
+        background-color:#408ec6;
+    }
+    .container{
+        border: 0px solid #408ec6;
+        border-width: 3px;
+        margin:160px 450px;
+        height: 450px;
+        outline: blueviolet;
+    }
+    h1{
+        text-align: center;
+        color: yellow;
+    }
+    #data{
+        margin-top: 25px;
+        margin-bottom: 25px;
+        margin-right: 75px;
+        margin-left: 60px;
+        padding:10px 150px;
+        font-size: large;
+        background-color: ghostwhite;
+        text-align: center;
+    }
+    #datatext{
+        text-align: center;
+        margin: 5px 250px;
+        padding:15px 50px;
+        color: white;     
+    }
+    #listData{
+      text-decoration-color: ghostwhite;
+      color: whitesmoke;
+    }
+   
+</style>
+</head>
+<body class="container">
+    <h1>To-do List</h1>
+    <form>
+        <input type="text" id="data" placeholder="Enter the task here"><br><br>
+        <input type="button" value="Add" id="datatext" onclick="dataAdd()">
+        <ul id="listData"></ul>
+    </form>
+    <script>
+        function dataAdd(){
+            var textData = document.getElementById("data").value
+            
+            addMethod(textData)
+            
+        }
+        function addMethod(textData){
+            var li = document.createElement("li")
+            li.innerHTML = textData
+            listData.appendChild(li)
+        }
+    </script>
+</body>
+
+</html>
